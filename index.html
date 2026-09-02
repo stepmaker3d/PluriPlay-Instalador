@@ -15,6 +15,7 @@
     --rosa: #ff2e88;
     --texto: #f2f0f7;
     --texto-fraco: #9b97ad;
+    --aviso: #ffb020;
   }
 
   * { box-sizing: border-box; }
@@ -71,13 +72,27 @@
     color: transparent;
   }
 
-  p.sub {
-    color: var(--texto-fraco);
-    font-size: 16px;
-    line-height: 1.55;
-    margin: 0 0 36px;
-    max-width: 46ch;
+  .aviso-topo {
+    background: rgba(255,176,32,0.10);
+    border: 1px solid rgba(255,176,32,0.45);
+    border-left: 3px solid var(--aviso);
+    border-radius: 12px;
+    padding: 16px 18px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--texto);
+    margin: 0 0 28px;
   }
+
+  .aviso-topo b { color: var(--aviso); }
+
+  .aviso-topo a {
+    color: var(--rosa);
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .aviso-topo a:hover { text-decoration: underline; }
 
   .passos {
     display: flex;
@@ -133,7 +148,9 @@
     margin: 14px 0 0;
   }
 
-  esp-web-install-button { --esp-tools-button-color: var(--roxo); --esp-tools-button-text-color: #fff; 
+  esp-web-install-button {
+    --esp-tools-button-color: var(--roxo);
+    --esp-tools-button-text-color: #fff;
   }
 
   #sem-suporte {
@@ -162,16 +179,20 @@
 
   <h1>Atualize o seu <span>PLURI PLAY</span> em três cliques</h1>
 
-  <p class="sub">
-    Sem instalar programa nenhum. Conecte o acionador no computador com um
-    cabo USB, clique em instalar abaixo e aguarde — o próprio navegador
-    grava a versão mais recente.
-  </p>
+  <div class="aviso-topo">
+    <b>Atenção — primeira vez atualizando neste computador?</b><br>
+    Pode ser necessário instalar um driver antes, para o computador
+    reconhecer o equipamento. Isso só é preciso uma vez por computador.
+    <a href="CH341SER.ZIP" target="_blank" rel="noopener">Baixar o driver (CH340) →</a><br>
+    Baixe, abra o arquivo e clique em <b>Install</b>. Depois volte nesta
+    página e clique em instalar normalmente. No Mac e Linux isso
+    geralmente não é necessário.
+  </div>
 
   <div class="passos">
     <div class="passo">
       <div class="n">1</div>
-      <div class="txt">Conecte o <b>PLURI PLAY</b> no computador com um cabo USB (o mesmo usado para carregar).</div>
+      <div class="txt">Conecte o <b>PLURI PLAY</b> no computador com um cabo USB. O aparelho tem <b>duas entradas USB-C</b> — use a do lado <b>direito</b>, que é a de atualização. A da esquerda é só para recarregar a bateria e não funciona para isso.</div>
     </div>
     <div class="passo">
       <div class="n">2</div>
