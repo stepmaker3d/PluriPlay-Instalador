@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PLURI PLAY — Instalar firmware</title>
+<script type="module" src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module"></script>
+<style>
+  :root {
+    --fundo: #0b0b12;
+    --painel: #14141f;
+    --borda: #2a2a3a;
+    --roxo: #7b2ff7;
+    --lilas: #c77dff;
+    --rosa: #ff2e88;
+    --texto: #f2f0f7;
+    --texto-fraco: #9b97ad;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--fundo);
+    background-image:
+      radial-gradient(circle at 15% 10%, rgba(123,47,247,0.18), transparent 40%),
+      radial-gradient(circle at 85% 85%, rgba(255,46,136,0.12), transparent 45%);
+    color: var(--texto);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 48px 20px;
+  }
+
+  main {
+    width: 100%;
+    max-width: 560px;
+  }
+
+  .selo {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--lilas);
+    letter-spacing: 0.02em;
+    margin-bottom: 18px;
+  }
+
+  .selo::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--rosa);
+    box-shadow: 0 0 10px var(--rosa);
+  }
+
+  h1 {
+    font-size: 34px;
+    line-height: 1.15;
+    margin: 0 0 12px;
+    font-weight: 700;
+  }
+
+  h1 span {
+    background: linear-gradient(90deg, var(--lilas), var(--rosa));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  p.sub {
+    color: var(--texto-fraco);
+    font-size: 16px;
+    line-height: 1.55;
+    margin: 0 0 36px;
+    max-width: 46ch;
+  }
+
+  .passos {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 36px;
+  }
+
+  .passo {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    background: var(--painel);
+    border: 1px solid var(--borda);
+    border-radius: 14px;
+    padding: 16px 18px;
+  }
+
+  .passo .n {
+    flex: none;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: rgba(123,47,247,0.25);
+    border: 1px solid var(--roxo);
+    color: var(--lilas);
+    font-size: 13px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .passo .txt {
+    font-size: 14.5px;
+    line-height: 1.5;
+    color: var(--texto);
+  }
+
+  .passo .txt b { color: var(--lilas); }
+
+  .painel-instalar {
+    background: var(--painel);
+    border: 1px solid var(--borda);
+    border-radius: 18px;
+    padding: 28px;
+    text-align: center;
+  }
+
+  .painel-instalar p {
+    color: var(--texto-fraco);
+    font-size: 13.5px;
+    margin: 14px 0 0;
+  }
+
+  esp-web-install-button {
+    --esp-tools-button-color: #fff;
+    --esp-tools-button-background-color: var(--roxo);
+  }
+
+  #sem-suporte {
+    display: none;
+    background: rgba(255,46,136,0.12);
+    border: 1px solid var(--rosa);
+    color: var(--texto);
+    border-radius: 14px;
+    padding: 18px;
+    font-size: 14.5px;
+    line-height: 1.5;
+  }
+
+  footer {
+    margin-top: 32px;
+    color: var(--texto-fraco);
+    font-size: 12.5px;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<main>
+
+  <div class="selo">INSTALADOR DIRETO PELO NAVEGADOR</div>
+
+  <h1>Atualize o seu <span>PLURI PLAY</span> em três cliques</h1>
+
+  <p class="sub">
+    Sem instalar programa nenhum. Conecte o acionador no computador com um
+    cabo USB, clique em instalar abaixo e aguarde — o próprio navegador
+    grava a versão mais recente.
+  </p>
+
+  <div class="passos">
+    <div class="passo">
+      <div class="n">1</div>
+      <div class="txt">Conecte o <b>PLURI PLAY</b> no computador com um cabo USB (o mesmo usado para carregar).</div>
+    </div>
+    <div class="passo">
+      <div class="n">2</div>
+      <div class="txt">Clique em <b>Instalar</b> logo abaixo e escolha a porta que aparecer na lista.</div>
+    </div>
+    <div class="passo">
+      <div class="n">3</div>
+      <div class="txt">Aguarde a barra de progresso terminar. Não desconecte o cabo até aparecer <b>concluído</b>.</div>
+    </div>
+  </div>
+
+  <div class="painel-instalar" id="area-instalar">
+    <esp-web-install-button manifest="manifest.json"></esp-web-install-button>
+    <p>Funciona no Google Chrome ou Microsoft Edge, no computador (não funciona no celular).</p>
+  </div>
+
+  <div id="sem-suporte">
+    Seu navegador não é compatível com esse instalador. Abra esta mesma
+    página no <b>Google Chrome</b> ou <b>Microsoft Edge</b>, num computador,
+    para conseguir instalar.
+  </div>
+
+  <footer>PLURI PLAY — Instalador de firmware</footer>
+
+</main>
+
+<script>
+  if (!navigator.serial) {
+    document.getElementById('area-instalar').style.display = 'none';
+    document.getElementById('sem-suporte').style.display = 'block';
+  }
+</script>
+
+</body>
+</html>
