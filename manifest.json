@@ -7,7 +7,7 @@
       "chipFamily": "ESP32",
       "parts": [
         { "path": "sketch_sep1a.ino.bootloader.bin", "offset": 4096 },
-        { "path": "sketch_se1a.ino.partitions.bin", "offset": 32768 },
+        { "path": "sketch_sep1a.ino.partitions.bin", "offset": 32768 },
         { "path": "sketch_sep1a.ino.bin", "offset": 65536 }
       ]
     }
