@@ -6,9 +6,7 @@
     {
       "chipFamily": "ESP32",
       "parts": [
-        { "path": "PluriPlay_V4.2_CYD_Comercial.ino.bootloader.bin", "offset": 4096 },
-        { "path": "PluriPlay_V4.2_CYD_Comercial.ino.partitions.bin", "offset": 32768 },
-        { "path": "PluriPlay_V4.2_CYD_Comercial.ino.bin", "offset": 65536 }
+        { "path": "PluriPlay_V4.2_CYD_Comercial.ino.merged.bin", "offset": 0 }
       ]
     }
   ]
