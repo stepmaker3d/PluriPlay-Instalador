@@ -188,6 +188,35 @@
     página e clique em instalar normalmente. No Mac e Linux isso
     geralmente não é necessário.
   </div>
+  <!-- ===== PLURI PLAY - Ajuda "a placa não aparece na lista" ===== -->
+<details style="margin:16px 0;padding:14px 16px;border:1px solid #3B4180;border-radius:12px;background:#1E2248;color:#B9BDE3;font-family:inherit;font-size:15px;line-height:1.5">
+  <summary style="cursor:pointer;color:#FFFFFF;font-weight:700">
+    A placa não aparece na lista? Clique aqui
+  </summary>
+  <ol style="margin:12px 0 0 0;padding-left:22px">
+    <li style="margin-bottom:8px"><b style="color:#FFB020">Ligue a chave do PLURI PLAY.</b>
+      Com a chave desligada, o cabo USB só carrega a bateria e o computador não enxerga o aparelho.</li>
+    <li style="margin-bottom:8px"><b style="color:#FFB020">Instale o driver (só na primeira vez):</b>
+      baixe o <a href="CH341SER.ZIP" download style="color:#5AA9FF">driver CH340 (CH341SER.ZIP)</a>,
+      descompacte, abra o <b>SETUP.EXE</b> e clique em <b>INSTALL</b>.
+      Depois desconecte e conecte o cabo de novo.</li>
+    <li style="margin-bottom:8px"><b style="color:#FFB020">Use um cabo de dados.</b>
+      Muitos cabos de carregador de celular só carregam. Se a placa não aparecer, teste outro cabo.</li>
+    <li style="margin-bottom:8px"><b style="color:#FFB020">Use o Google Chrome ou o Microsoft Edge</b>, no computador
+      (não funciona no celular).</li>
+    <li style="margin-bottom:8px"><b style="color:#FFB020">Feche outros programas</b> que possam estar usando o aparelho,
+      como a IDE do Arduino com o Monitor Serial aberto.</li>
+    <li style="margin-bottom:8px"><b style="color:#FFB020">Na lista do navegador</b>, escolha
+      <b>USB-SERIAL CH340 (COM…)</b> e clique em <b>Conectar</b>.</li>
+  </ol>
+  <p style="margin:10px 0 0 0;font-size:14px">
+    Para conferir: clique com o botão direito no <b>Iniciar</b> → <b>Gerenciador de Dispositivos</b> →
+    <b>Portas (COM e LPT)</b>. Deve aparecer <b>USB-SERIAL CH340</b>. Se aparecer
+    "Dispositivo desconhecido", falta o driver (passo 2). Se não aparecer nada, confira a chave e o cabo
+    (passos 1 e 3).
+  </p>
+</details>
+<!-- ===== fim da ajuda ===== -->
 
   <div class="passos">
     <div class="passo">
