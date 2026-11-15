@@ -1,12 +1,12 @@
 {
   "name": "PLURI PLAY",
-  "version": "4.2",
+  "version": "4.6",
   "new_install_prompt_erase": false,
   "builds": [
     {
       "chipFamily": "ESP32",
       "parts": [
-        { "path": "PluriPlay_V4.2_CYD_Comercial.ino.merged.bin", "offset": 0 }
+        { "path": "PluriPlay_V4.6_CYD_Comercial.ino.merged.bin", "offset": 0 }
       ]
     }
   ]
