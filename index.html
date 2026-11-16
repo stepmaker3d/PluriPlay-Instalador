@@ -178,7 +178,24 @@
   <div class="selo">INSTALADOR DIRETO PELO NAVEGADOR</div>
 
   <h1>Atualize o seu <span>PLURI PLAY</span> em três cliques</h1>
-
+<!-- ===== PLURI PLAY - versão atual (lida do manifest.json) ===== -->
+<div id="pp-versao" style="display:inline-flex;align-items:center;gap:10px;margin:14px 0 6px;padding:10px 18px;border-radius:999px;background:#1E2248;border:2px solid #FFB020;font-family:inherit">
+  <span style="width:10px;height:10px;border-radius:50%;background:#3DDC84;display:inline-block"></span>
+  <span style="color:#B9BDE3;font-size:15px;font-weight:600">Versão disponível:</span>
+  <span id="pp-versao-num" style="color:#FFB020;font-size:20px;font-weight:800">carregando…</span>
+</div>
+<script>
+  fetch('manifest.json', { cache: 'no-store' })
+    .then(function (r) { return r.json(); })
+    .then(function (m) {
+      document.getElementById('pp-versao-num').textContent = 'V' + m.version;
+    })
+    .catch(function () {
+      document.getElementById('pp-versao').style.display = 'none';
+    });
+</script>
+<!-- ===== fim da versão atual ===== -->
+  
   <div class="aviso-topo">
     <b>Atenção — primeira vez atualizando neste computador?</b><br>
     Pode ser necessário instalar um driver antes, para o computador
