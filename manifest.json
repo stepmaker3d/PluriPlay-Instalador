@@ -1,7 +1,7 @@
 {
   "name": "PLURI PLAY",
   "version": "4.11",
-  "new_install_prompt_erase": false,
+  "new_install_prompt_erase": true,
   "builds": [
     {
       "chipFamily": "ESP32",
