@@ -1,15 +1,15 @@
 {
   "name": "PLURI PLAY",
-  "version": "4.14",
+  "version": "4.15",
   "new_install_prompt_erase": true,
   "builds": [
     {
       "chipFamily": "ESP32",
       "parts": [
-        { "path": "PluriPlay_V4.14_CYD_Comercial.ino.bootloader.bin", "offset": 4096 },
-        { "path": "PluriPlay_V4.14_CYD_Comercial.ino.partitions.bin", "offset": 32768 },
+        { "path": "PluriPlay_V4.15_CYD_Comercial.ino.bootloader.bin", "offset": 4096 },
+        { "path": "PluriPlay_V4.15_CYD_Comercial.ino.partitions.bin", "offset": 32768 },
         { "path": "boot_app0.bin", "offset": 57344 },
-        { "path": "PluriPlay_V4.14_CYD_Comercial.ino.bin", "offset": 65536 }
+        { "path": "PluriPlay_V4.15_CYD_Comercial.ino.bin", "offset": 65536 }
       ]
     }
   ]
